@@ -5,3 +5,4 @@ Captura de perfilpage.ts
 Captura de PerfilPage.html
 <img width="945" height="723" alt="image" src="https://github.com/user-attachments/assets/758a5980-3738-47ae-b290-1305a4aad9b2" />
 Captura de la pagina desplegada 
+<img width="1919" height="973" alt="image" src="https://github.com/user-attachments/assets/927481a5-d6cd-40b2-812a-fc5b82b9835b" />
