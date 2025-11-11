@@ -18,6 +18,7 @@
         #txtDescripcion>
 
         <button (click)="addProyecto()">agregar</button>
+        <button (click)="eliminarProyecto">Eliminar</button>
 
     </div>
 
@@ -35,4 +36,10 @@
             }
         </ul>
     </div>
+    <listado-proyectos 
+        listName="listado de proyectos"
+        [proyectos]="proyectos()"
+    ></listado-proyectos> 
+
+    
 </section>

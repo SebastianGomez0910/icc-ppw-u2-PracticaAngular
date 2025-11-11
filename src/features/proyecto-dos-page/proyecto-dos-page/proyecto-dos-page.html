@@ -1,1 +1,12 @@
-<p>proyecto-dos-page works!</p>,
+
+<listado-proyectos
+listName="listado de proyectos desde servicio"
+[proyectos]="proyectoService.proyectos()"
+></listado-proyectos>
+
+<add-proyecto 
+(newProyecto)="proyectoService.AddProyecto($event)"
+(removeProyecto)="proyectoService.eliminarProyecto()"
+></add-proyecto>
+
+
