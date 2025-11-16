@@ -3,6 +3,7 @@ import { Homepage } from '../features/homepage/homepage';
 import { Perfilpage } from '../features/perfilpage/perfilpage';
 import { Proyectopage } from '../features/proyecto-page/proyectopage/proyectopage';
 import { ProyectoDosPage } from '../features/proyecto-dos-page/proyecto-dos-page/proyecto-dos-page';
+import { Formulario } from '../features/formulario/formulario/formulario';
 //import { Component } from '@angular/core';
 
 export const routes: Routes = [
@@ -21,5 +22,9 @@ export const routes: Routes = [
     {
         path:'proyectoDos',
         component:ProyectoDosPage
+    },
+    {
+        path:'Formulario',
+        component:Formulario
     }
 ];
