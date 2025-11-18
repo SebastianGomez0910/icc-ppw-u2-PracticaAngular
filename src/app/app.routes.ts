@@ -23,8 +23,12 @@ export const routes: Routes = [
         path:'proyectoDos',
         component:ProyectoDosPage
     },
-    {
+    /*{
         path:'Formulario',
         component:Formulario
-    }
-];
+    },*/
+    {
+        path:'formulario',
+        loadChildren:
+        ()=>import('../features/formularios/formularios-routes').then(m=>m.formulariosRoutes),
+    },];

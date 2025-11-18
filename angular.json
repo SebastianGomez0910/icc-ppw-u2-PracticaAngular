@@ -15,6 +15,7 @@
           "options": {
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
+            "baseHref": "/icc-ppw-u2-PracticaAngular/",
             "assets": [
               {
                 "glob": "**/*",

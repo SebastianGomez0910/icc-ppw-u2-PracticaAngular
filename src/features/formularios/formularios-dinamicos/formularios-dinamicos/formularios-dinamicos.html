@@ -1,0 +1,80 @@
+<h2>Formularios: <small>Dinámicos</small></h2>
+<hr>
+
+
+<form autocomplete="off" 
+      [formGroup]="myForm" 
+      (ngSubmit)="onSubmit()">
+
+    <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Nombre</label>
+        <div class="col-sm-9">
+            <input class="form-control"
+                   formControlName="name"
+                   placeholder="Nombre del proyecto">
+        </div>
+        @if(formUtils.isValidField(myForm, 'name')){
+          <span class="form-text text-danger">
+            {{ formUtils.getFieldError(myForm, 'name') }}
+          </span>
+        }
+    </div>
+
+
+    <div class="mb-3 row">
+      <label class="col-sm-3 col-form-label">Agregar</label>
+      <div class="col-sm-9">
+        <div class="input-group">
+          <input
+            class="form-control"
+            placeholder="Agregar lenguaje"
+            [formControl]="newLenguaje"
+            (keydown.enter)="onAddToLenguajes(); $event.preventDefault()"
+          >
+          <button
+            class="btn btn-outline-primary"
+            type="button"
+            (click)="onAddToLenguajes()"
+          >
+            Agregar
+          </button>
+        </div> @if(formUtils.isValidField(myForm, 'name')){
+              <span class="form-text text-danger">
+                {{ formUtils.getFieldError(myForm, 'name') }}
+              </span>
+            }
+      </div>
+    </div>
+
+
+    <div class="mb-3 row">
+      <label class="col-sm-3 col-form-label">Lenguajes</label>
+      <div class="col-sm-9" formArrayName="lenguajes">
+
+        @for(item of lenguajes.controls; let i = $index; track $index) {
+          <div class="input-group mb-2">
+            <input class="form-control" [formControlName]="i">
+            <button
+              class="btn btn-outline-danger"
+              type="button"
+              (click)="onDeleteLenguaje(i)"
+            >
+              Eliminar
+            </button>
+          </div>
+          @if(formUtils.isValidFieldInArray(lenguajes, i)) {
+            <span class="form-text text-danger">
+              {{ formUtils.getFieldErrorInArray(lenguajes, i) }}
+            </span>
+          }
+        }
+
+        @if(formUtils.isValidField(myForm, 'lenguajes')){
+          <span class="form-text text-danger">
+            {{ formUtils.getFieldError(myForm, 'lenguajes') }}
+          </span>
+        }
+      </div>
+    </div>
+
+</form> 

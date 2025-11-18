@@ -31,7 +31,7 @@ export class Formulario {
       return;
     }
     console.log('Datos del formulario',this.myForm.value);
-    alert('formulario invalido. datos enviados correctamente ')
+    alert('formulario listo. datos enviados correctamente ')
     this.myForm.reset();
   }
 
